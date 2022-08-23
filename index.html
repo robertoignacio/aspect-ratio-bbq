@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ Webinar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="ff-sans fs-body bg-clr-white">
+
+    <main class="page-container-box">
+
+        <section class="hero-container-box bg-image textshadow">
+            <div class="wrapper-box">
+                <div class="gradient-bar"></div>
+                <p class="gradient-bar-text">Mouthwateringly delicious</p>
+            </div>
+            
+            <div class="wrapper-box center-y-45">
+                <h1 class="hero-proposal">Learn how to make <br><strong>the best BBQ ribs</strong><br> in town</h1>
+                <h2 class="hero-invite">Join us for this live webinar</h2>
+            </div>            
+        </section>
+
+        <aside class="message-container-box">            
+            <div class="wrapper-box center-y-45">
+                <h2 class="message-proposal">Become a BBQ master!</h2>
+                <p class="message-cta">Register today</p>
+                <p class="message-reasoning">BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
+
+                <form id="form-cta" class="cta-form" action="post">
+                    <input class="form-field" type="text" name="input-name" id="input-name" placeholder="Your First Name">
+                    <input class="form-field" id="email" name="input-email" type="email" placeholder="Your email">
+                    <button id="btn-cta" form="form-cta" onclick="window.location.reload();" class="form-field form-button uppercase" formtarget="_self" type="submit" name="btn-cta" value="register">Register</button>
+                </form>
+
+            <div class="message-privacy fs-small">We'll never share your information without your permission</div>
+            </div>
+            
+        </aside>
+
+    </main>
+
+    <div id="aspect-inspector"></div>
+    
+</body>
+</html>

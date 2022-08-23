@@ -1,0 +1,348 @@
+/* --- Custom Properties --- */
+:root {
+/* Custom Colors */
+    --clr-white: #FFF;
+    --clr-dark: #404040;
+    --clr-accent: #F18119;
+    --clr-gradient-left: #FF713B;
+    --clr-gradient-right: #FFA51D;
+
+    --clr-gradient: linear-gradient(270deg, var(--clr-gradient-left), var(--clr-gradient-right));
+
+/* font-families */
+    --ff-sans-normal: 'Source Sans Pro', sans-serif;
+
+/* font-sizes */
+    --fs-h1-small: 2.25rem;
+    --fs-h2-small: 1.3125rem;
+    --fs-body-small: 1rem;
+    --fs-small-small: 0.625rem;
+
+    --fs-h1-large: 3.25rem;
+    --fs-h2-large: 1.50rem;
+    --fs-body-large: 1.125rem;
+    --fs-small-large: 0.625rem;
+}
+
+
+/* --- CSS Reset --- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* include the padding and border in an element's total width and height */
+}
+
+/* Reset margins */
+html,
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Font weight base */
+h1,
+h2,
+p {
+    font-weight: 400;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+/* --- Utility Classes --- */
+
+/* General Positioning */
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.center-y-45 {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+
+/* Typography */
+.ff-sans {
+    font-family: var(--ff-sans-normal);
+}
+
+.fs-h1 {
+    font-size: var(--fs-h1-large);
+}
+
+.fs-h2 {
+    font-size: var(--fs-h2-large);
+}
+
+.fs-body {
+    font-size: var(--fs-body-large);
+}
+
+.fs-small {
+    font-size: var(--fs-small-large);
+}
+
+
+/* Text shadow outline */
+.textshadow {
+    text-shadow: -1px -1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000, 1px 1px 10px #000;
+}
+
+
+/* Colors */
+.text-clr-white {
+    color: var(--clr-white, #FFF);
+}
+
+.text-clr-dark {
+    color: var(--clr-dark, #404040);
+}
+
+.text-clr-accent {
+    color: var(--clr-accent, #F18119);
+}
+
+.bg-clr-white {
+    background-color: var(--clr-white, #FFF);
+}
+
+
+/* --- Box size and position --- */
+.page-container-box {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper-box {
+    margin: 0;
+}
+
+.hero-container-box {
+    width: 58.75%;   
+}
+
+.message-container-box {
+    width: 41.25%;
+    padding: 5%;
+}
+
+
+/* --- Components: Hero styling --- */
+.bg-image {
+    background-image: url("../images/ribs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.gradient-bar {
+    margin: 0 auto;
+    /* width: 181px; */
+    width: 11.25rem;
+    height: 0.5rem;
+    /* background: linear-gradient(270deg, var(--clr-gradient-left), var(--clr-gradient-right)); */
+    background: var(--clr-gradient);
+}
+
+/* "Mouthwateringly delicious" */
+.gradient-bar-text {
+    padding-top: 1em;
+    font-size: var(--fs-small-large);
+    color: var(--clr-accent, #F18119);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+}
+
+/* "Learn how to make... */
+.hero-proposal {
+    font-size: var(--fs-h1-large);
+    color: var(--clr-white, #FFF);
+    padding-inline: 5%;
+    line-height: 1;
+    font-weight: 300;
+}
+
+h1 strong {
+    font-weight: 700;
+}
+
+/* "Join us for this live seminar" */
+.hero-invite {
+    font-size: var(--fs-h2-large);
+    color: var(--clr-accent, #F18119);
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* --- Components: Message box --- */
+/* "Become a BBQ master!" */
+.message-proposal {
+    font-size: var(--fs-h2-large);
+    color: var(--clr-dark, #404040);
+    font-weight: 900;    
+}
+
+/* "Register today" */
+.message-cta {
+    color: var(--clr-accent, #F18119);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 2% auto;
+}
+
+/* "BBQ isn´t just standing in front..." */
+.message-reasoning {
+    line-height: 1.5;
+    margin: 3% auto;
+}
+
+
+/* --- Components: Form Styling --- */
+.form-field {
+    width: 75%;
+    text-align: center;
+    border-radius: 7px;
+    border: 1px solid #818181;
+    height: 2.5em;
+    padding: 0 0.5em;
+    margin: 0.4em auto;
+}
+
+.form-field::placeholder {
+    text-align: center;
+}
+
+.form-button {
+    background: var(--clr-gradient);
+    color: var(--clr-white);
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.form-button:hover,
+.form-button:focus {
+    filter: saturate(200%);
+}
+
+.message-privacy {
+    margin: 0 auto;
+    width: 60%;
+}
+
+
+/* --- Media queries by aspect ratio --- */
+
+/* width/height aspect ratio, 
+for the query it requires both integers 
+for instance you require an aspect-ratio: 1.1 
+so you will have to use 11/10 */
+
+/* from less restrictive to more */ 
+
+
+/* 0 < x < max */
+/* normal colors from a-r: infinite reducing to a-r: first */
+
+
+/* from aspect-ratio: 0  to  aspect-ratio: 1.093 */
+@media (max-aspect-ratio: 750/1000) and (max-width: 100vh) {
+
+    body {
+        font-size: var(--fs-body-small);
+    }
+
+    .page-container-box {
+        flex-direction: column;
+    }
+
+    .hero-container-box {
+        width: 100%;
+        height: 40%;
+    }
+
+    .gradient-bar-text {
+        font-size: var(--fs-small-small);
+    }
+
+    .hero-proposal {
+        font-size: var(--fs-h1-small);
+    }
+
+    .hero-invite {
+        font-size: var(--fs-h2-small);
+    }
+
+    
+    .message-container-box {
+        width: 100%;
+        height: 60%;
+    }
+
+    /* "Become a BBQ master!" */
+    .message-proposal {
+        font-size: var(--fs-h2-small);
+        margin-top: 1rem;
+    }
+
+    /* "Resister today" */
+    .message-cta {
+        font-weight: 700;
+    }
+
+    /* "BBQ isn´t just standing in front..." */
+    .message-reasoning {
+        font-size: var(--fs-body-small);
+    }
+}
+
+
+/* aspect inspector */
+#aspect-inspector {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    visibility: 1;
+}
