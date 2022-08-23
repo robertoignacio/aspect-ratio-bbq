@@ -158,6 +158,7 @@ select {
 }
 
 .hero-container-box {
+    /* percentage of parent container */
     width: 58.75%;   
 }
 
@@ -280,15 +281,21 @@ for the query it requires both integers
 for instance you require an aspect-ratio: 1.1 
 so you will have to use 11/10 */
 
-/* from less restrictive to more */ 
+/*
+ min-width --> "from a minimum width of X and bigger"
+ (min-width < X < infinite)
 
+ max-width --> "from 0 to X"
+ (0 < X < max-width)
 
-/* 0 < x < max */
-/* normal colors from a-r: infinite reducing to a-r: first */
+ (min-width) and (max-width) --> "between these both
+ */
+
+/*  */ 
 
 
 /* from aspect-ratio: 0  to  aspect-ratio: 1.093 */
-@media (max-aspect-ratio: 750/1000) and (max-width: 100vh) {
+@media (max-aspect-ratio: 750/1000) and (max-width: 20%) {
 
     body {
         font-size: var(--fs-body-small);
