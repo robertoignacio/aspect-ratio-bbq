@@ -281,7 +281,7 @@ h1 strong {
     visibility: 1;
 }
 
-#js-media-queries {
+#devicepixelratio-insp {
     position: fixed;
     bottom: 10px;
     left: 10px;
@@ -297,13 +297,14 @@ h1 strong {
 
  (min-width) and (max-width) --> "between these both
  */
-@media (max-aspect-ratio: 750/1000) and (max-width: 500px) {
+@media (max-width: 600px) {
 
     body {
         font-size: var(--fs-body-small);
     }
 
     .page-container-box {
+        min-width: 320px;
         flex-direction: column;
     }
 
