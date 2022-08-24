@@ -12,9 +12,10 @@ let initW = document.documentElement.clientWidth;
 let initH = document.documentElement.clientHeight;
 
 aspectInpector.innerText = `aspect-ratio: ${roundDec3(initW/initH)}
-width: ${initW}px
-height: ${initH}px`;
+clientWidth: ${initW}px
+clientHeight: ${initH}px`;
 
+/* note that resize is expensive */
 window.addEventListener("resize", () => {
     // viewport width in pixels:
     let vWidth = document.documentElement.clientWidth;
@@ -23,10 +24,11 @@ window.addEventListener("resize", () => {
 
     // aspect ratio works in fractions so
     aspectInpector.innerText = `aspect-ratio: ${roundDec3(vWidth/vHeight)}
-    width: ${vWidth}px
-    height: ${vHeight}px`;
+    clientWidth: ${vWidth}px
+    clientHeight: ${vHeight}px`;
 });
 
+// rounding decimals
 function roundDec3(num) {
     let rounded = Math.round((num + Number.EPSILON) * 1000) / 1000
     return rounded
