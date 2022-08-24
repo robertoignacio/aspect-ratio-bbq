@@ -1,26 +1,4 @@
 
-// width, height - when opening the window viewport
-let initWidth = document.documentElement.clientWidth;
-let initHeight = document.documentElement.clientHeight;
-
-// js media queries inspector on the bottom left corner
-const jsMQ = document.getElementById("js-media-queries");
-
-// values on document load
-let devicePixelRatio = window.devicePixelRatio;
-let dprAsPercentage = roundDec2((devicePixelRatio * 100));
-jsMQ.innerText = `devicePixelRatio: ${devicePixelRatio}dppx
-dprAsPercentage: ${dprAsPercentage}%
-clientWidth: ${initWidth}px
-clientHeight: ${initHeight}px`;
-
-// conditionally set the pixel density from the device display area
-// media query "resolution" is not supported on Safari
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
-const setPixelDensity = () => {
-
-}
-
 // https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 // grab the HTML body element that carry layout changes
 // requires refactoring
@@ -109,53 +87,3 @@ window.addEventListener("resize", () => {
         elemMessRs.style.setProperty("font-size", "var(--fs-body-small)");
     }
 });
-
-
-
-
-
-
-
-
-// rounding decimals to .0
-function roundDec2(num) {
-    let rounded = Math.round((num + Number.EPSILON) * 100) / 100
-    return rounded
-};
-
-/*
-
-https://stackoverflow.com/questions/31955113/what-is-different-between-devicepixelratio-and-dppx
-CSS interprets a device's resolution by the formula: 
-device_resolution/css_pixel_ratio
-
-For example:
-Samsung Galaxy S III
-
-Actual resolution: 720 x 1280
-CSS Pixel Ratio: 2
-Interpreted resolution: (720/2) x (1280/2) = 360 x 640
-
-When viewing a web page, the CSS will think the device has a 360x640 resolution screen and Media Queries will respond as if the screen is 360x640.
-But the rendered elements on the screen will be twice as sharp as an actual 360x640 screen.
-
-The reason that CSS pixel ratio was created is because as phones screens get higher resolutions, if every device still had a CSS pixel ratio of 1 then webpages would render too small to see.
-
-[...]
-CSS features two units in which to express this magnitude:
-dpi (dots per inch)
-dppx (dots per pixel)
-
-One dppx is the pixel density found in a 96dpi screen. (Because 96dpi was the dot density of CRT monitors)
-1dppx = 96dpi
-
-[...]
-devicePixelRatio and dppx are exactly the same. 
-The former is called from Javascript, and, the latter is used in CSS.
-The browser asks for this value from the OS. 
-The OS defines this value in its display mode.
-Typical values are: @1x, @2x, @3x, @1.5x
-The browser (engine) will use the media in @ dimension to achieve the highest quality.
-This is done by the browser engine, not by us.
-
-*/
