@@ -287,3 +287,61 @@ h1 strong {
     left: 10px;
     visibility: 1;
 }
+
+/*
+ min-width --> "from a minimum width of X and bigger"
+ (min-width < X < infinite)
+
+ max-width --> "from 0 to X"
+ (0 < X < max-width)
+
+ (min-width) and (max-width) --> "between these both
+ */
+@media (max-aspect-ratio: 750/1000) and (max-width: 500px) {
+
+    body {
+        font-size: var(--fs-body-small);
+    }
+
+    .page-container-box {
+        flex-direction: column;
+    }
+
+    .hero-container-box {
+        width: 100%;
+        height: 40%;
+    }
+
+    .gradient-bar-text {
+        font-size: var(--fs-small-small);
+    }
+
+    .hero-proposal {
+        font-size: var(--fs-h1-small);
+    }
+
+    .hero-invite {
+        font-size: var(--fs-h2-small);
+    }
+    
+    .message-container-box {
+        width: 100%;
+        height: 60%;
+    }
+
+    /* "Become a BBQ master!" */
+    .message-proposal {
+        font-size: var(--fs-h2-small);
+        margin-top: 1rem;
+    }
+
+    /* "Resister today" */
+    .message-cta {
+        font-weight: 700;
+    }
+
+    /* "BBQ isn´t just standing in front..." */
+    .message-reasoning {
+        font-size: var(--fs-body-small);
+    }
+}
