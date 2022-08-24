@@ -1,7 +1,7 @@
 # aspect-ratio-bbq
 
 It is a practice of a course project from Scrimba (Frontend Path).\
-I am studying conditional device pixel ratio and image resolution.\
+I am studying conditional device pixel ratio and image resolution using that setup.\
 Hosted on: [https://stellar-kheer-7b0eee.netlify.app/](https://stellar-kheer-7b0eee.netlify.app/)
 
 Because the browser Dev Tools inspector (Chrome, Firefox) only shows pixel sizes,\
