@@ -3,9 +3,9 @@
 Here I explore the concept of js media queries from aspect-ratio without external libraries.\
 For instance:
 ```
-if (width < height) ---> apply narrow layout\
-if aspect-ratio: 0.8 from width/height ---> apply narrow layout\
-if (width > height) ---> wide layout\
+if (width < height) ---> apply narrow layout
+if aspect-ratio: 0.8 from width/height ---> apply narrow layout
+if (width > height) ---> wide layout
 ```
 (Will require tweaks for large displays anyway)\
 It could be done with window.matchMedia() .match, but would be the same as with CSS.
