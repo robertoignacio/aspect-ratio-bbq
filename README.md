@@ -1,5 +1,7 @@
 # aspect-ratio-bbq
 
+HTML, CSS, JavaScript
+
 Here I explore the concept of js media queries from aspect-ratio without external libraries.\
 For instance:
 ```
@@ -10,8 +12,7 @@ if (width > height) ---> wide layout
 (Will require tweaks for large displays anyway)\
 It could be done with window.matchMedia() .match, but would be the same as with CSS.
 
-### aspect-ratio concept
-![aspect-ratio concepto](./images/aspect-ratio-concept.jpg)
+<img src="./images/aspect-ratio-concept.jpg" width="50%" height="50%"/>
 
 ### First iteration: as JavaScript
 ```
