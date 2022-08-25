@@ -73,6 +73,21 @@ I could solve it from the scope of widths, but is not the concept.
 @media (max-aspect-ratio: 75/100)
 /* Can be done with css vars, but always integers */
 ```
+With a script: [script.js](../main/scripts/script.js)
+```
+/* note that resize is expensive */
+window.addEventListener("resize", () => {
+    // viewport width in pixels:
+    let vWidth = document.documentElement.clientWidth;
+    // viewport height in pixels
+    let vHeight = document.documentElement.clientHeight;
+
+    // aspect ratio works in fractions so
+    aspectInpector.innerText = `aspect-ratio: ${roundDec3(vWidth/vHeight)}
+    clientWidth: ${vWidth}px
+    clientHeight: ${vHeight}px`;
+});
+```
 
 ### About the layout itself
 The base project is from Scrimba (Frontend Path).\
@@ -83,7 +98,7 @@ I hosted it on: [https://stellar-kheer-7b0eee.netlify.app/](https://stellar-khee
 ## About the tooltip at the corner
 Because the browser Dev Tools inspector (Chrome, Firefox) only shows pixel sizes,\
 I added a simple script that detects the local inner window size and devicePixelRatio:\
-[devicepixelratio.js](../main/devicepixelratio.js)
+[devicepixelratio.js](../main/scripts/devicepixelratio.js)
 It is responsive to resizes, with dynamic text.\
 
 Of course, the input form is not connected to anything.
