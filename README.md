@@ -68,6 +68,11 @@ to set that up you have to obtain the "ratio" from calculated relation width/hei
 For example, to obtain a ratio of 0.8 y could be a width of 8 and a height of 10.\
 You can reach the ratio (and trigger the media query) with a lower height, having narrow layouts on a wide display...\
 I could solve it from the scope of widths, but is not the concept.
+```
+/* For an aspect-ratio of 0.75 */
+@media (max-aspect-ratio: 75/100)
+/* Can be done with css vars, but always integers */
+```
 
 ### About the layout itself
 The base project is from Scrimba (Frontend Path).\
