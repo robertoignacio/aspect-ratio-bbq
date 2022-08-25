@@ -15,6 +15,12 @@ It could be done with window.matchMedia() .match, but would be the same as with 
 
 ### First iteration: as JavaScript
 ```
+// global
+const elemPageCB = document.querySelector(".page-container-box");
+const elemHeroCB = document.querySelector(".hero-container-box");
+const elemMessCB = document.querySelector(".message-container-box");
+// etc produced
+
 // "resize" is expensive, but helps with this situation
 window.addEventListener("resize", () => {
   let dWidth = document.documentElement.clientWidth;
@@ -22,8 +28,27 @@ window.addEventListener("resize", () => {
   
   if (dWidth >= dHeight) {
     // apply wide layout
+    elemPageCB.style.setProperty("flex-direction", "row");
+    
+    elemHeroCB.style.setProperty("width", "58.75%");
+    elemHeroCB.style.setProperty("height", "100vh");
+    
+    elemMessCB.style.setProperty("width", "41.25%");
+    elemMessCB.style.setProperty("height", "100vh");
+    
+    // etc, not refactored
   } else {
     // apply narrow layout
+    
+    elemPageCB.style.setProperty("flex-direction", "column");
+    
+    elemHeroCB.style.setProperty("width", "100%");
+    elemHeroCB.style.setProperty("height", "40%");
+    
+    elemMessCB.style.setProperty("width", "100%");
+    elemMessCB.style.setProperty("height", "60%");
+    
+    // etc, not refactored
   }
 }
 ```
