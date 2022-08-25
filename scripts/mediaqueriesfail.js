@@ -47,7 +47,7 @@ window.addEventListener("resize", () => {
     // the problem with js media queries is that you have to set each layout trigger with explicit properties
     // js media queries have bigger priority (specificity)
 
-    if (dWidth >= dHeight){
+    if (dWidth >= dHeight) {
         jsMQ.innerText = "Wide Layout";
 
         elemPageCB.style.setProperty("flex-direction", "row");

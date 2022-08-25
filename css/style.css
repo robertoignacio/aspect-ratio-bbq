@@ -13,15 +13,21 @@
     --ff-sans-normal: 'Source Sans Pro', sans-serif;
 
 /* font-sizes */
-    --fs-h1-small: 2.25rem;
-    --fs-h2-small: 1.3125rem;
-    --fs-body-small: 1rem;
-    --fs-small-small: 0.625rem;
+    --fs-body-base: 1em; /* as 1em = 16px body default */
+
+    --fs-h1-small: clamp(0.75rem, 2rem, 2.25rem);
+    --fs-h2-small: clamp(0.625, 1rem, 1.3125rem);
+    --fs-body-small: clamp(0.5rem, 0.75rem, 1rem);
+    --fs-small-small: clamp(0.5rem, 0.6rem, 0.625rem);
 
     --fs-h1-large: 3.25rem;
     --fs-h2-large: 1.50rem;
     --fs-body-large: 1.125rem;
     --fs-small-large: 0.625rem;
+
+/* line-heights */
+    --lh-1-dot-5: 1.5;
+    --lh-1-dot-0: 1.0;
 }
 
 
@@ -62,7 +68,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+    font-family: inherit;
 }
 
 /* Remove animations for people who've turned them off */
@@ -97,6 +103,11 @@ select {
 
 
 /* Typography */
+body {
+    font-size: var(--fs-body-base);
+}
+
+
 .ff-sans {
     font-family: var(--ff-sans-normal);
 }
@@ -246,9 +257,9 @@ h1 strong {
     text-align: center;
     border-radius: 7px;
     border: 1px solid #818181;
-    height: 2.5em;
-    padding: 0 0.5em;
-    margin: 0.4em auto;
+    height: clamp(1rem, 2rem, 2.5rem);
+    padding: 0 0.25em;
+    margin: 0.25em auto;
 }
 
 .form-field::placeholder {
@@ -296,7 +307,7 @@ h1 strong {
     }
 
     .page-container-box {
-        min-width: 320px;
+        min-width: 17.5rem;
         flex-direction: column;
     }
 
