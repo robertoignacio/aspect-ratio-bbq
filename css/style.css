@@ -273,14 +273,6 @@ h1 strong {
     width: 60%;
 }
 
-/* aspect inspector */
-#aspect-inspector {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    visibility: 1;
-}
-
 #devicepixelratio-insp {
     position: fixed;
     bottom: 10px;
