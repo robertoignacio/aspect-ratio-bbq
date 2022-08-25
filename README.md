@@ -15,6 +15,7 @@ It could be done with window.matchMedia() .match, but would be the same as with 
 
 ### First iteration: as JavaScript
 ```
+// "resize" is expensive, but helps with this situation
 window.addEventListener("resize", () => {
   let dWidth = document.documentElement.clientWidth;
   let dHeight = document.documentElement.clientHeight;
