@@ -71,6 +71,7 @@ I could solve it from the scope of widths, but is not the concept.
 
 ### About the layout itself
 The base project is from Scrimba (Frontend Path).\
+(Requires more work on small displays)\
 I hosted it on: [https://stellar-kheer-7b0eee.netlify.app/](https://stellar-kheer-7b0eee.netlify.app/)\
 ![Narrow layout](./images/layoutnarrow.jpg)
 
